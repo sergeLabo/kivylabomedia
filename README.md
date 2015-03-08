@@ -16,7 +16,7 @@ Testé sous Linux Mint 17 avec python3 et kivy
 [Kivy pour les débutants](http://wiki.labomedia.org/index.php/Kivy_Tutoriel_Exemple_pour_d%C3%A9butant)
 
 ###Comment lancer  un exemple
-Cloner le git.
+Cloner le git ou télécharger le zip.
 
 Ouvrir un terminal dans le dossier.
 

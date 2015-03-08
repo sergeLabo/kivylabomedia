@@ -13,7 +13,7 @@ Window.size = (1120, 630)
 
 class GridlayoutApp(App):
     '''L'application principale.'''
-    def build(GridLayout):
+    def build(FloatLayout):
         '''Gridlayout.kv commence par "GridLayout".
         GridLayout ne prend pas size_hint_y, tous les boutons ont la même
         hauteur.

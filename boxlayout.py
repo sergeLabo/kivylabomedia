@@ -12,10 +12,10 @@ Window.size = (1120, 630)
 
 class BoxlayoutApp(App):
     '''L'application principale.'''
-    def build(GridLayout):
+    def build(FloatLayout):
         '''Boxlayout.kv commence par "BoxLayout"
         BoxLayout ne prend pas cols et rows, seulement horizontal ou vertical.
-        Cette fonction build construit Sur un GridLayout.
+        Cette fonction build construit sur un FloatLayout.
         '''
         pass
 
