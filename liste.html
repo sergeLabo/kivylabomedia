@@ -1,0 +1,431 @@
+{{Menu Kivy}}
+
+Les éléments graphiques sont définis dans le *.kv, et non dans le main.py.
+
+Pour construire une application installable sur Android avec [[Kivy_Comment_cr%C3%A9er_une_application_Android_pour_un_script_python|Buildozer]], le fichier principal doit s'appeler main.py. Dans les exemples ici, ils ont un nom explicite pour s'y retrouver.
+
+Testé sous Linux Mint 17 et '''python 3.4'''.
+
+C'est du python, BoxLayout n'a rien à voir avec Boxlayout
+* BoxLayout est uneclass Kivy
+* Boxlayout est une class à moi, qui va utilisé BoxLayout quelque part
+
+=Les fichiers sur Github et en zip=
+[https://github.com/sergeLabo/kivylabomedia '''kivilabomedia''' sur Github]
+
+Cloner le git ou télécharger le zip.
+
+Ouvrir un terminal dans le dossier.
+
+*python3 je_teste.py
+
+Dans geany, ouvrir tous les fichiers et Excécuter les .py
+
+=Liste des éléments graphiques kivy.uix=
+* [http://kivy.org/docs/api-kivy.uix.html '''Liste des widgets'''] Tous les éléments à votre disposition.
+* [http://kivy.org/docs/guide/lang.html Programming Guide  Kv language]
+* [http://kivy.org/docs/api-kivy.lang.html Kivy Language]
+
+=Widgets classique pour interface utilisateur =
+* Label
+* [[Kivy_Tutoriel_Exemple_pour_débutant#Button|Button]]
+* CheckBox
+* Image
+* Slider
+* Progress Bar
+* Text Input
+* Toggle button
+* Switch
+* Video
+
+==Label==
+
+==[http://kivy.org/docs/api-kivy.uix.boxlayout.html Button]==
+
+==CheckBox==
+
+==Image==
+
+==Slider==
+
+==Progress Bar==
+
+==Text Input==
+
+==Toggle button==
+
+==Switch==
+
+==Video==
+
+=Layouts: Méthodes de dispositions des éléments graphiques=
+* [[Kivy_Tutoriel_Exemple_pour_débutant#AnchorLayout|Anchor Layout]]
+* [[Kivy_Tutoriel_Exemple_pour_débutant#BoxLayout|Box Layout]]
+* [[Kivy_Tutoriel_Exemple_pour_débutant#FloatLayout|Float Layout]]
+* [[Kivy_Tutoriel_Exemple_pour_débutant#GridLayout|Grid Layout]]
+* [[Kivy_Tutoriel_Exemple_pour_débutant#PageLayout|Page Layout]]
+* [[Kivy_Tutoriel_Exemple_pour_débutant#RelativeLayout|Relative Layout]]
+* [[Kivy_Tutoriel_Exemple_pour_débutant#ScatterLayout|Scatter Layout]]
+* [[Kivy_Tutoriel_Exemple_pour_débutant#StackLayout|Stack Layout]]
+
+==[http://kivy.org/docs/api-kivy.uix.anchorlayout.html AnchorLayout]==
+[[Fichier:Anchor1.png|300px]] Les éléments sont ancrés sur un point
+
+'''anchorlayout.py'''
+<syntaxhighlight lang="python">
+#! /usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import kivy
+kivy.require('1.8.0')
+
+from kivy.app import App
+from kivy.core.window import Window
+
+Window.size = (1120, 630)
+
+class AnchorlayoutApp(App):
+    def build(FloatLayout):
+        pass
+
+if __name__ == '__main__':
+    AnchorlayoutApp().run()
+</syntaxhighlight>
+
+'''anchorlayout.kv'''
+<syntaxhighlight lang="python">
+#:kivy 1.8.0
+
+AnchorLayout:
+    anchor_x: 'right'
+    anchor_y: 'bottom'
+    padding: 50
+    Button:
+        size_hint: 0.3, 0.4
+        text: "bouton 1"
+    Label:
+        size_hint: 0.7, 0.6
+        text: "Je suis ancré"
+</syntaxhighlight>
+
+==[http://kivy.org/docs/api-kivy.uix.boxlayout.html BoxLayout]==
+[[Fichier:Tuto11.png|300px]] Empilement de boîtes horizontales ou verticales.
+
+'''boxlayout.py'''
+<syntaxhighlight lang="python">
+#! /usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import kivy
+kivy.require('1.8.0')
+
+from kivy.app import App
+from kivy.core.window import Window
+
+Window.size = (1120, 630)
+
+class BoxlayoutApp(App):
+    def build(FloatLayout):
+        pass
+
+if __name__ == '__main__':
+    BoxlayoutApp().run()
+</syntaxhighlight>
+
+'''boxlayout.kv'''
+<syntaxhighlight lang="python">
+#:kivy 1.8.0
+
+BoxLayout:
+    spacing: 10
+    padding: 10
+    orientation: "horizontal"
+    Button:
+        text: "bouton 1"
+    Button:
+        text: "bouton 2"
+    Button:
+        size_hint_y: 0.3
+        text: "bouton 3"
+    BoxLayout:
+        spacing: 10
+        padding: 10
+        orientation: "vertical"
+        Button:
+            size_hint_y: 0.5
+            text: "bouton 4"
+        Button:
+            size_hint_y: 0.4
+            text: "bouton 5"
+        Button:
+            size_hint_y: 0.3
+            text: "bouton 6"
+        Button:
+            text: "bouton 7"
+</syntaxhighlight>
+
+==[http://kivy.org/docs/api-kivy.uix.floatlayout.html FloatLayout]==
+
+==[http://kivy.org/docs/api-kivy.uix.gridlayout.html GridLayout]==
+[[Fichier:Tuto22.png|300px]] Défini une grille avec des lignes et des colonnes.
+
+'''gridlayout.py'''
+<syntaxhighlight lang="python">
+#! /usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import kivy
+kivy.require('1.8.0')
+
+from kivy.app import App
+from kivy.core.window import Window
+
+Window.size = (1120, 630)
+
+
+class GridlayoutApp(App):
+    def build(FloatLayout):
+        pass
+
+if __name__ == '__main__':
+    GridlayoutApp().run()
+</syntaxhighlight>
+
+'''gridlayout.kv'''
+<syntaxhighlight lang="python">
+#:kivy 1.8.0
+
+GridLayout:
+    spacing: 10
+    padding: 10
+    cols: 2
+    rows: 2
+    Button:
+        text: "bouton 1"
+    Button:
+        text: "bouton 2"
+    Button:
+        text: "bouton 3"
+    GridLayout:
+        spacing: 10
+        padding: 10
+        cols: 2
+        rows: 2
+        Button:
+            size_hint_y: 0.5
+            text: "bouton 4"
+        Button:
+            size_hint_y: 0.4
+            text: "bouton 5"
+        Button:
+            size_hint_y: 0.3
+            text: "bouton 6"
+        Button:
+            text: "bouton 7"
+</syntaxhighlight>
+
+==[http://kivy.org/docs/api-kivy.uix.pagelayout.html PageLayout]==
+[[Fichier:Page1.png|300px]] Pour faire tourner des pages
+
+'''pagelayout.py'''
+<syntaxhighlight lang="python">
+#! /usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import kivy
+kivy.require('1.8.0')
+
+from kivy.app import App
+from kivy.core.window import Window
+
+Window.size = (1120, 630)
+
+class PagelayoutApp(App):
+    def build(FloatLayout):
+        pass
+
+if __name__ == '__main__':
+    PagelayoutApp().run()
+</syntaxhighlight>
+
+'''pagelayout.kv'''
+<syntaxhighlight lang="python">
+#:kivy 1.8.0
+
+PageLayout:
+    Button:
+        text: 'page1'
+    Button:
+        text: 'page2'
+    Button:
+        text: 'page3'
+</syntaxhighlight>
+
+==[http://kivy.org/docs/api-kivy.uix.stacklayout.html StackLayout]==
+[[Fichier:Stack1.png|300px]] Empile depuis le point défini
+
+'''stacklayout.py'''
+<syntaxhighlight lang="python">
+#! /usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import kivy
+kivy.require('1.8.0')
+
+from kivy.app import App
+from kivy.core.window import Window
+
+Window.size = (1120, 630)
+
+class StacklayoutApp(App):
+    def build(FloatLayout):
+        pass
+
+if __name__ == '__main__':
+    StacklayoutApp().run()
+</syntaxhighlight>
+
+'''stacklayout.kv'''
+<syntaxhighlight lang="python">
+#:kivy 1.8.0
+
+StackLayout:
+    spacing: 10
+    padding: 10
+    orientation: 'tb-rl'
+    Button:
+        text: "bouton 1"
+        size_hint: 0.3, 0.5
+    Button:
+        text: "bouton 2"
+        size_hint: 0.2, 0.2
+    Button:
+        text: "bouton 3"
+        size_hint: 0.15, 0.2
+</syntaxhighlight>
+
+==[http://kivy.org/docs/api-kivy.uix.relativelayout.html RelativeLayout]==
+[[Fichier:Relative1.png|300px]] Retourne des coordonnées relatives
+
+'''relativelayout.py'''
+<syntaxhighlight lang="python">
+#! /usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import kivy
+kivy.require('1.8.0')
+
+from kivy.app import App
+from kivy.core.window import Window
+
+Window.size = (1120, 630)
+
+class RelativelayoutApp(App):
+    def build(FloatLayout):
+        pass
+
+if __name__ == '__main__':
+    RelativelayoutApp().run()
+</syntaxhighlight>
+
+'''relativelayout.kv'''
+<syntaxhighlight lang="python">
+#:kivy 1.8.0
+
+BoxLayout:
+    Label:
+        text: 'Left'
+    Button:
+        text: 'Middle'
+        on_touch_down: print('Middle: {}'.format(self.to_local(*args[1].pos)))
+    RelativeLayout:
+        on_touch_down: print('Relative: {}'.format(self.to_local(*args[1].pos)))
+        Button:
+            text: 'Right'
+            on_touch_down: print('Right: {}'.format(self.to_local(*args[1].pos)))
+</syntaxhighlight>
+
+==[http://kivy.org/docs/api-kivy.uix.scatterlayout.html ScatterLayout]==
+[[Fichier:Scatter1.png|300px]] [[Fichier:Scatter2.png|300px]] Permet de déplacer des widgets.
+
+'''scatterlayout.py'''
+<syntaxhighlight lang="python">
+#! /usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import kivy
+kivy.require('1.8.0')
+
+from kivy.app import App
+from kivy.core.window import Window
+
+Window.size = (1120, 630)
+
+class ScatterlayoutApp(App):
+    def build(FloatLayout):
+        pass
+
+if __name__ == '__main__':
+    ScatterlayoutApp().run()
+</syntaxhighlight>
+
+'''scatterlayout.kv'''
+<syntaxhighlight lang="python">
+#:kivy 1.8.0
+
+FloatLayout:
+    ScatterLayout:
+        Label:
+            size_hint: 0.2, 0.2
+            text: 'Left'
+        Label:
+            size_hint: 0.2, 0.5
+            text: 'Middle'
+        ScatterLayout:
+            Label:
+                size_hint: 0.5, 0.2
+                text: 'Right'
+</syntaxhighlight>
+
+=Widgets complexes=
+* Bubble
+* Drop-Down List
+* FileChooser
+* Popup
+* Spinner
+* List View
+* TabbedPanel
+* Video player
+* VKeyboard
+
+==[http://kivy.org/docs/api-kivy.uix.bubble.html Buble]==
+
+==[http://kivy.org/docs/api-kivy.uix.dropdown.html Drop-Down List]==
+
+==[http://kivy.org/docs/api-kivy.uix.filechooser.html File Chooser]==
+
+==[http://kivy.org/docs/api-kivy.uix.popup.html Popup]==
+
+==[http://kivy.org/docs/api-kivy.uix.spinner.html Spinner]==
+
+==[http://kivy.org/docs/api-kivy.uix.listview.html List View]==
+
+==[http://kivy.org/docs/api-kivy.uix.tabbedpanel.html Tabbed Pannel]==
+
+==[http://kivy.org/docs/api-kivy.uix.videoplayer.html Video Player]==
+
+==[http://kivy.org/docs/api-kivy.uix.vkeyboard.html Virtual Keyboard]==
+
+=Widgets de comportement=
+* Scatter
+* Stencil View
+
+==[http://kivy.org/docs/api-kivy.uix.scatter.html Scatter]==
+
+==[http://kivy.org/docs/api-kivy.uix.stencilview.html Stencil View]==
+
+=Gestion d'écrans=
+==[http://kivy.org/docs/api-kivy.uix.screenmanager.html Screen manager]==
+
+<syntaxhighlight lang="python">
+</syntaxhighlight>
