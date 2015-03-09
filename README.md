@@ -8,6 +8,9 @@ Ajouter du graphisme dans truc.py ne peut que perdre le débutant.
 
 Tout doit être droit et bien rangé ! Et les noms bien choisis pour être explicite.
 
+###Le wiki pointe sur la doc officielle
+
+###Le dossier contient le kivycatalog et le showhcase des exemples
 
 ###Dépendances
 Testé sous Linux Mint 17 avec python3 et kivy

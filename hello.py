@@ -9,12 +9,11 @@ from kivy.uix.floatlayout import FloatLayout
 from kivy.properties import ObjectProperty, StringProperty
 from kivy.core.window import Window
 
-# Set window size or not with your screen resolution
 Window.size = (1120, 630)
 
 
 class Hello(FloatLayout):
-    '''class des actions.'''
+    '''hello.kv commence par <Hello>'''
     # Text du bouton
     info = StringProperty()
 
