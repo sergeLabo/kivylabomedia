@@ -10,7 +10,11 @@ Tout doit être droit et bien rangé ! Et les noms bien choisis pour être expli
 
 ###Le wiki pointe sur la doc officielle
 
-###Le dossier contient le kivycatalog et le showhcase des exemples
+###Le dossier contient
+* kivycatalog
+* showhcase
+* widget
+des exemples de la doc
 
 ###Dépendances
 Testé sous Linux Mint 17 avec python3 et kivy
