@@ -1,0 +1,31 @@
+#:kivy 1.8.0
+
+GridLayout:
+    print("je suis dans kv")
+    cols: 4
+    rows: 3
+    padding: 10
+    Label:
+        text: "Je suis un label"
+    Button:
+        text: "bouton 1"
+    CheckBox:
+        active: True
+    Image:
+        source: 'softboy.png'
+    Slider:
+        min: -100
+        max: 100
+        value: 25
+    ProgressBar:
+        min: 0
+        max: 1000
+    TextInput:
+        text: "Saisir un texte"
+    ToggleButton:
+        text: "Mode poésie"
+    Switch:
+        active: True
+    Video:
+        source: "softboy.avi"
+        play: True
