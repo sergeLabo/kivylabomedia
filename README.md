@@ -1,5 +1,7 @@
 # kivylabomedia
-Simple examples to learn how to use kivy, french comments
+Des exemples simples pour apprendre à utiliser Kivy, lorsqu'on n'est pas docteur en informatique.
+
+Commentaires en français.
 
 ###Philosophie
 Le code de l'application est dans le truc.py et le code pour le graphisme dans le truc.kv
