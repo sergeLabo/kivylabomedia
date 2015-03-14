@@ -1,0 +1,17 @@
+#:kivy 1.8.0
+
+<CustomDropDown>:
+    Button:
+        text: 'Ca sert a quoi ce putain de bordel'
+        size_hint_y: None
+        height: 44
+        on_release: root.select('mal poli')
+    Label:
+        text: 'Item qui ne fait rien : fainéant !'
+        size_hint_y: None
+        height: 44
+    Button:
+        text: 'Je dois resté poli !'
+        size_hint_y: None
+        height: 44
+        on_release: root.select('poli')
