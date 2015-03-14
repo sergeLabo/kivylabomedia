@@ -4,7 +4,9 @@ Des exemples simples pour apprendre à utiliser Kivy, lorsqu'on n'est pas docteu
 Commentaires en français.
 
 ###Philosophie
-Le code de l'application est dans le truc.py et le code pour le graphisme dans le truc.kv
+Pour une application qui teste truc, le code de l'application est dans truc.py
+
+et le code pour le graphisme dans truc.kv
 
 Ajouter du graphisme dans truc.py ne peut que perdre le débutant.
 
@@ -16,6 +18,7 @@ Tout doit être droit et bien rangé ! Et les noms bien choisis pour être expli
 * kivycatalog
 * showhcase
 * widget
+
 des exemples de la doc
 
 ###Dépendances
