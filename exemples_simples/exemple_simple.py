@@ -27,8 +27,6 @@ class DropdownDemo(FloatLayout):
         '''
         super(DropdownDemo, self).__init__(**kwargs)
         self.dropdown = CustomDropDown()
-        # Variable qui montre une interaction si un choix est fait
-        self.baratin = 0
         # Création d'un widget bouton
         self.mainbutton = Button(text='Etes-vous poli ou mal poli?',
                                  size_hint_x=0.6, size_hint_y=0.15)

@@ -1,0 +1,21 @@
+#:kivy 1.8.0
+
+<MenuScreen>:
+    BoxLayout:
+        Button:
+            text: 'Définir les options'
+            font_size: 36
+            on_press: root.manager.current = 'Options'
+        Button:
+            font_size: 36
+            text: 'Quitter'
+
+<SettingsScreen>:
+    BoxLayout:
+        Button:
+            text: "Mon bouton d'options"
+            font_size: 36
+        Button:
+            text: 'Retour au menu'
+            font_size: 36
+            on_press: root.manager.current = 'Menu'

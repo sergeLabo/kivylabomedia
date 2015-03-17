@@ -4,6 +4,8 @@
 # Python test
 *_old.py
 
+# html pour wiki
+*.html
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
